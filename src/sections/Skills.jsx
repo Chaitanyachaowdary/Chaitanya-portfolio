@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
+import Tilt from "react-parallax-tilt";
 import RevealOnScroll from '../components/RevealOnScroll';
 import HackerText from '../components/HackerText';
 
@@ -56,7 +56,7 @@ const Skills = () => {
                                 { name: "Material UI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" },
                                 { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
                             ].map((skill, index) => (
-                                <Tilt key={index} options={{ max: 25, scale: 1.05, speed: 400 }} className="h-full">
+                                <Tilt key={index} tiltMaxAngleX={25} tiltMaxAngleY={25} scale={1.05} transitionSpeed={400} className="h-full">
                                     <RevealOnScroll
                                         delay={index * 0.05}
                                         className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-colors h-full group"

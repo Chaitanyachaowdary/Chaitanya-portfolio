@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
+import Tilt from "react-parallax-tilt";
 import { Briefcase } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 import HackerText from '../components/HackerText';
@@ -41,7 +41,7 @@ const Experience = () => {
                             </div>
 
                             {/* Content */}
-                            <Tilt options={{ max: 15, scale: 1.02, speed: 400 }} className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
+                            <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.02} transitionSpeed={400} className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
                                 <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors shadow-xl h-full">
                                     <div className="flex justify-between items-center mb-2">
                                         <h3 className="font-bold text-lg text-white">{exp.role}</h3>

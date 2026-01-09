@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
+import Tilt from "react-parallax-tilt";
 import { ExternalLink, Github } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 import HackerText from '../components/HackerText';
@@ -95,7 +95,7 @@ const Projects = () => {
                             delay={i * 0.1}
                             className="h-full"
                         >
-                            <Tilt options={{ max: 15, scale: 1.02, speed: 400 }} className="h-full">
+                            <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400} className="project-card">
                                 <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-colors h-full">
                                     {/* Image */}
                                     <div className="h-48 w-full relative overflow-hidden">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
+import Tilt from "react-parallax-tilt";
 import { ArrowRight, Github, Linkedin, Mail, ArrowDown, Eye } from 'lucide-react';
 import HackerText from '../components/HackerText';
 import RevealOnScroll from '../components/RevealOnScroll';
@@ -68,7 +68,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="order-1 lg:order-2 flex justify-center lg:justify-end relative"
                 >
-                    <Tilt options={{ max: 15, scale: 1.05, speed: 400 }} className="relative w-72 h-72 md:w-96 md:h-96">
+                    <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400} className="relative w-72 h-72 md:w-96 md:h-96">
                         {/* 3D Background Animation Elements */}
                         <div className="absolute -inset-6 rounded-full border border-primary/20 animate-spin" style={{ animationDuration: '10s' }} />
                         <div className="absolute -inset-2 rounded-full border border-purple-500/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />

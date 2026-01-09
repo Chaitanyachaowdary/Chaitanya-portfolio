@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
+import Tilt from "react-parallax-tilt";
 import RevealOnScroll from '../components/RevealOnScroll';
 import HackerText from '../components/HackerText';
 
@@ -9,7 +9,7 @@ const About = () => {
         <section id="about" className="py-20 px-8 max-w-7xl mx-auto">
             <div className="max-w-4xl mx-auto">
                 <RevealOnScroll className="text-center md:text-left rounded-2xl p-8 backdrop-blur-sm">
-                    <Tilt options={{ max: 5, scale: 1.01, speed: 400 }}>
+                    <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} className="xs:w-[250px] w-full">
                         <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
                             <h2 className="text-4xl font-bold mb-6 font-display text-center">
                                 <HackerText text="About Me" />

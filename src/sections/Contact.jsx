@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
-
+import Tilt from "react-parallax-tilt";
 import { Mail, Linkedin, Github, Twitter, Send } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 import HackerText from '../components/HackerText';
@@ -73,7 +72,7 @@ const Contact = () => {
                     </RevealOnScroll>
 
                     <RevealOnScroll className="h-full">
-                        <Tilt className="h-full" options={{ max: 15, scale: 1.02, speed: 400 }}>
+                        <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400} className="contact-card">
                             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 h-full">
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div>
